@@ -1,0 +1,6 @@
+{
+  "Plástico": { "nivel": 6.01, "capacidad": 100.00 },
+  "Vidrio": { "nivel": 2.32, "capacidad": 150.00 },
+  "Papel": { "nivel": 3.05, "capacidad": 80.00 },
+  "Metal": { "nivel": 6.35, "capacidad": 120.00 }
+}
