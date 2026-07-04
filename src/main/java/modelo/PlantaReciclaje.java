@@ -80,15 +80,17 @@ public class PlantaReciclaje {
             return "La cinta está vacía. Simula la entrada de un residuo.";
         }
 
-        Residuo r = cinta.remove(0);
+        Residuo r = cinta.get(0);
         String tipoCont = ResiduoFactory.contenedorPara(r);
         Contenedor c = contenedores.get(tipoCont);
 
         if (c == null) {
+            cinta.remove(0);
             return "No existe contenedor para el tipo: " + tipoCont;
         }
 
         if (!r.esReciclable()) {
+            cinta.remove(0);
             return String.format("⚠ %s NO es reciclable (tóxico/dañado). Derivado a tratamiento especial.", r);
         }
 
@@ -101,6 +103,7 @@ public class PlantaReciclaje {
                     r.getID(), r.getPeso(), c.getNombre());
         }
 
+        cinta.remove(0);
         escribirLog(r, c);
         return String.format("✅ %s depositado en '%s'. Nivel: %.0f%%",
                 r.getID(), c.getNombre(), c.getPorcentajeLlenado());

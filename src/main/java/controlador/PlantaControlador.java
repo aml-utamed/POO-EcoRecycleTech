@@ -72,8 +72,9 @@ public class PlantaControlador {
 
             // Comprobar alertas de contenedores llenos
             for (Map.Entry<String, Contenedor> entry : modelo.getContenedores().entrySet()) {
-                if (entry.getValue().estaLleno()) {
-                    vista.mostrarAlertaLleno(entry.getValue().getNombre());
+                Contenedor cont = entry.getValue();
+                if (cont.estaLleno() || cont.getPorcentajeLlenado() >= 95) {
+                    vista.mostrarAlertaLleno(cont.getNombre());
                 }
             }
         }
