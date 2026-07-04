@@ -1,0 +1,36 @@
+# Compiled class files
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+*.swp
+.project
+.classpath
+.settings/
+nbproject/
+build/
+nbbuild/
+nbdist/
+nb-configuration.xml
+
+# Build output
+out/
+target/
+bin/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Application generated files
+recycle.log
+estado_planta.json
